@@ -1,0 +1,71 @@
+
+question1 
+
+V = (-100:.1:50)*1e-3;
+z= 2;
+values = [0.001  0.1 1 5 10 50 100 1000];
+
+for i = 1:length(values)
+    [Phi] = GHK (z,values(i),V);
+    plot(V*1e3, Phi*1e3);
+    hold on;
+end
+xlabel ('V (mV)');
+ylabel ('Phi');
+ylim ([-100 100]);
+
+% title (plot)
+v = values';
+% lgd=legend (num2str(v));
+title ( 'IN/OUT');
+
+
+
+
+function [OUT_IN] = GHK (z,u,V)
+JK= 8.314;
+T= 292;
+mole = 6.022e23;
+boltz = JK/mole;
+e = 1.602e-19;
+Volt =boltz * T/e;
+OUT_IN =V.* (1-u*exp(z*V/Volt))./(1-exp(z*V/Volt));
+end
+
+
+queastion 4 
+
+radius = 1e-3;
+Cm = 1e-6;
+Istim =1e-10;
+
+
+Gmax.K =36e-3;
+Gmax.Na = 120e-3;
+Gmax.C1 = 6.7e-5;
+
+E.K = -75e-3;
+E.Na = 55e-3;
+E.C1 = -99e-3;
+
+Vo = -60e-3;
+n0 = .3;
+m0 = .2;
+h0 = .2;
+
+dt = 1e-5;
+tFinal = 0.1;
+
+function [alpha_n, beta_n,alpha_m,beta_m,alpha_h,beta_h]=HH(V)
+
+V_K = V-(60);
+V_na =V-(60);
+alpha_n = 0.01*(-V_K+10)/(exp((-V_K+10)/10)-1);
+beta_n = 0.125*exp(-V_K/80);
+alpha_m =0.1*((25-V_na)/(exp((25-V_na)/10)-1));
+beta_m =4 *exp(-V_na/18);
+alpha_h = 0.07*exp(-V_na/20);
+beta_h =1/exp((30-V_na)/10+1);
+end
+
+

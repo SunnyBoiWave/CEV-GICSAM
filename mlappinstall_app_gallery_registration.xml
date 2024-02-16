@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toolset id="user_apps_toolset" template="false">
+   <tool app_file_path="./" handler_class="com.mathworks.appmanagement.desktop.ToolboxToolSetExtensionHandler" id="fffff950-b408-46fe-8aa9-0ef0fec2a646" label="tic tac toe" toolset_id="user_apps_toolset">
+      <callback>matlab.apputil.run('tictactoeAPP')</callback>
+      <summary>A full fledge TIC TAC TOE Game with AI ability.</summary>
+      <parent_tool id="my_apps" toolset_id="apps_toolset"/>
+   </tool>
+</toolset>
