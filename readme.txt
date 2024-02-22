@@ -1,8 +1,11 @@
 
-Recomended Environment
+#MATLAB Test project with datasets IPC med
+
  -MATLAB version : 2018a or later versions
- -OS             : Windows10
- 
+ -Username: Use school edu email : Passwerd : CEV2024 
+ -LibRef: SchoolMedGICSAM 
+ -DATA set: pick 11-16 
+
 Preparation for Start
  -Please move "bgm" directory and run "bgmMake.m" before start!!
 
@@ -23,6 +26,8 @@ How to Edit Stage?
 
 How to Play Edited Stage?
  -Change stage name in "stageName.txt" 
+
+How to 
 
 
 
