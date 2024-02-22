@@ -27,7 +27,9 @@ How to Edit Stage?
 How to Play Edited Stage?
  -Change stage name in "stageName.txt" 
 
-How to 
+How to add clinical data?
+ -Use Data Acquisition ToolBox
+ -If configuring use Simulink 
 
 
 
